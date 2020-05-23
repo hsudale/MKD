@@ -60,7 +60,6 @@ v.1.0 - James Beswick (@jbesw) - contact me with any questions!
     (() => {
       const form = document.querySelector('form');
       const submitResponse = document.querySelector('#response');
-      //const formURL = 'https://a123456789.execute-api.us-east-1.amazonaws.com/Prod/submitForm';  // ENTER YOUR API ENDPOINT HERE
       const formURL = 'https://c28c5r466g.execute-api.us-east-1.amazonaws.com/Prod/submitForm';  // ENTER YOUR API ENDPOINT HERE
 
       form.onsubmit = e => {
@@ -83,7 +82,7 @@ v.1.0 - James Beswick (@jbesw) - contact me with any questions!
         xhr.onloadend = response => {
           if (response.target.status === 200) {
             form.reset();
-            submitResponse.innerHTML = 'Form submitted. Success!';
+            submitResponse.innerHTML = 'Form submitted. Success!  We\'ll reach out as soon as we can.';
           } else {
             submitResponse.innerHTML = 'Error! Please try again.';
             console.error(JSON.parse(response.target.response).message);
@@ -92,11 +91,5 @@ v.1.0 - James Beswick (@jbesw) - contact me with any questions!
       };
     })();
   </script>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
