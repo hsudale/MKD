@@ -33,7 +33,7 @@ v.1.0 - James Beswick (@jbesw) - contact me with any questions!
     <!-- Main form -->
   <div class="card">
     <div class="card-body">
-    <h2>My serverless form</h2>
+    <h2>My Contact-US form</h2>
     <form action="" method="POST">
       <div class="form-group">
         <label for="email">Email address</label>
@@ -60,7 +60,8 @@ v.1.0 - James Beswick (@jbesw) - contact me with any questions!
     (() => {
       const form = document.querySelector('form');
       const submitResponse = document.querySelector('#response');
-      const formURL = 'https://a123456789.execute-api.us-east-1.amazonaws.com/Prod/submitForm';  // ENTER YOUR API ENDPOINT HERE
+      //const formURL = 'https://a123456789.execute-api.us-east-1.amazonaws.com/Prod/submitForm';  // ENTER YOUR API ENDPOINT HERE
+      const formURL = 'https://c28c5r466g.execute-api.us-east-1.amazonaws.com/Prod/submitForm';  // ENTER YOUR API ENDPOINT HERE
 
       form.onsubmit = e => {
         e.preventDefault();
