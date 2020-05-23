@@ -33,18 +33,17 @@ v.1.0 - James Beswick (@jbesw) - contact me with any questions!
     <!-- Main form -->
   <div class="card">
     <div class="card-body">
-    <h2>My Contact-US form</h2>
+    <h2>My Contact-Us Form</h2>
     <form action="" method="POST">
-      <div class="form-group">
-        <label for="email">Email address</label>
-        <input type="email" class="form-control" id="email"  placeholder="Enter email">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-      </div>
-
       <div class="form-group">
         <label for="name">Name</label>
         <input type="name" class="form-control" id="name"  placeholder="Your name">
       </div>  
+
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email"  placeholder="Enter email">
+      </div>
 
       <div class="form-group">
         <label for="name">Message</label>
@@ -82,7 +81,7 @@ v.1.0 - James Beswick (@jbesw) - contact me with any questions!
         xhr.onloadend = response => {
           if (response.target.status === 200) {
             form.reset();
-            submitResponse.innerHTML = 'Form submitted. Success!  We\'ll reach out as soon as we can.';
+            submitResponse.innerHTML = 'Form submitted!  We\'ll reach out as soon as we can.';
           } else {
             submitResponse.innerHTML = 'Error! Please try again.';
             console.error(JSON.parse(response.target.response).message);
